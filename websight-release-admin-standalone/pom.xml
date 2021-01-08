@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>pl.ds.websight</groupId>
+        <artifactId>websight-parent</artifactId>
+        <version>1</version>
+        <relativePath />
+    </parent>
+
+    <artifactId>websight-release-admin-standalone</artifactId>
+    <packaging>slingstart</packaging>
+    <version>1.0.0</version>
+
+    <description>Standalone WebSight.Admin toolset.</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>slingstart-maven-plugin</artifactId>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${basedir}</directory>
+                            <includes>
+                                <include>sling/**</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>ianal-maven-plugin</artifactId>
+                <configuration>
+                    <requiredFiles>
+                        <file>LICENSE</file>
+                    </requiredFiles>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>1.8</version>
+                <configuration>
+                    <licenseName>agpl_v3</licenseName>
+                    <licenseFile>${project.basedir}/../LICENSE</licenseFile>
+                    <generateBundle>true</generateBundle>
+                    <bundleLicensePath>../../slingstart-tmp/standalone/META-INF/LICENSE</bundleLicensePath>
+                    <excludedScopes>test</excludedScopes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>license-management</id>
+                        <goals>
+                            <goal>update-project-license</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <delete>
+                                    <fileset dir="${project.build.directory}/slingstart-tmp/standalone/META-INF">
+                                        <include name="NOTICE" />
+                                        <include name="DEPENDENCIES" />
+                                    </fileset>
+                                </delete>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <skipSource>true</skipSource>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+  <scm>
+    <tag>1.0.0</tag>
+  </scm>
+</project>

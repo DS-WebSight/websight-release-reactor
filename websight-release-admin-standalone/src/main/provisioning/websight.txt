@@ -1,0 +1,21 @@
+[feature name=websight]
+
+[artifacts]
+    # Websight Sling Release
+    pl.ds.websight/websight-release-admin-sling/1.0.0/zip
+
+    # Libraries
+    pl.ds.websight/websight-authentication-config/1.0.0/zip
+    pl.ds.websight/websight-authentication-token/1.0.0
+    pl.ds.websight/websight-error-handlers/1.0.0
+    pl.ds.websight/websight-root-redirect/1.0.0
+
+[artifacts startLevel=15]
+    org.apache.jackrabbit.vault/org.apache.jackrabbit.vault/3.4.0
+
+[configurations]
+  org.apache.sling.engine.parameters
+    sling.default.parameter.encoding="UTF-8"
+
+  pl.ds.websight.root.redirect.RootRedirectServlet
+    redirectTarget="/apps/admin/"
