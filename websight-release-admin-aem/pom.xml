@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>websight-release-admin-aem</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>content-package</packaging>
     <description>AEM Package with WebSight.Admin toolset.</description>
 
@@ -213,17 +213,17 @@
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-swagger-browser-view</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-swagger-browser-service</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-aem-ui-extension</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <type>zip</type>
         </dependency>
         <dependency>
@@ -285,6 +285,7 @@
     </profiles>
 
   <scm>
-    <tag>1.0.0</tag>
+    <tag>1.0.1</tag>
+    <developerConnection>scm:git:ssh://git@192.168.1.146:7999/ws/websight-release-reactor.git</developerConnection>
   </scm>
 </project>

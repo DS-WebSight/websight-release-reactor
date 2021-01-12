@@ -2,7 +2,7 @@
 
 [artifacts]
     # Websight Sling Release
-    pl.ds.websight/websight-release-admin-sling/1.0.0/zip
+    pl.ds.websight/websight-release-admin-sling/1.0.1/zip
 
     # Libraries
     pl.ds.websight/websight-authentication-config/1.0.0/zip
