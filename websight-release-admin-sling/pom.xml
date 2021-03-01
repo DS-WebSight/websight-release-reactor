@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>websight-release-admin-sling</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>content-package</packaging>
     <description>Sling Package with WebSight.Admin toolset.</description>
 
@@ -80,17 +80,17 @@
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-rest-framework</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-rest-esm-client</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-rest-atlaskit-client</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
@@ -114,13 +114,13 @@
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
-            <artifactId>websight-authentication-service</artifactId>
-            <version>1.0.0</version>
+            <artifactId>websight-authentication-postprocessor</artifactId>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-authentication-view</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
@@ -141,64 +141,64 @@
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-admin-commons</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-resource-browser-service</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-resource-browser-ext-jcr</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-resource-browser-content</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-resource-browser-view</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-package-manager-service</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-package-manager-view</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-package-manager-config</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-user-manager-service</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-user-manager-view</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-groovy-console-service</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
             <artifactId>websight-groovy-console-view</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>pl.ds.websight</groupId>
@@ -269,7 +269,7 @@
     </profiles>
 
   <scm>
-    <tag>1.0.1</tag>
+    <tag>1.0.2</tag>
     <developerConnection>scm:git:ssh://git@192.168.1.146:7999/ws/websight-release-reactor.git</developerConnection>
   </scm>
 </project>
