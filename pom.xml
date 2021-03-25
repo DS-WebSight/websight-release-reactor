@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>pl.ds.websight</groupId>
+    <artifactId>websight-parent</artifactId>
+    <version>2</version>
+    <relativePath></relativePath>
+  </parent>
+  <artifactId>websight-release-reactor</artifactId>
+  <version>1.0.3</version>
+  <packaging>pom</packaging>
+  <name>WebSight Release Reactor</name>
+  <description>Release Reactor is a module created for build release package from all required WebSight
+Admin modules.</description>
+  <url>https://github.com/DS-WebSight/websight-release-reactor</url>
+  <organization>
+    <name>Dynamic Solutions sp. z o.o. sp. k.</name>
+    <url>https://ds.pl</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>GNU Affero General Public License v3.0</name>
+      <url>https://github.com/DS-WebSight/websight-release-reactor/blob/master/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Michal Cukierman</name>
+      <email>michal.cukierman@ds.pl</email>
+      <organization>Dynamic Solutions</organization>
+      <organizationUrl>https://www.ds.pl/</organizationUrl>
+    </developer>
+  </developers>
+  <modules>
+    <module>websight-release-admin-aem</module>
+    <module>websight-release-admin-sling</module>
+    <module>websight-release-admin-standalone</module>
+  </modules>
+  <scm>
+    <connection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</connection>
+    <developerConnection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</developerConnection>
+    <url>https://github.com/DS-WebSight/websight-release-reactor</url>
+  </scm>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>pl.ds.websight</groupId>
+    <artifactId>websight-parent</artifactId>
+    <version>2</version>
+    <relativePath></relativePath>
+  </parent>
+  <artifactId>websight-release-admin-standalone</artifactId>
+  <version>1.0.3</version>
+  <packaging>slingstart</packaging>
+  <name>WebSight Release Admin Standalone</name>
+  <description>Standalone WebSight.Admin toolset.</description>
+  <url>https://github.com/DS-WebSight/websight-release-reactor</url>
+  <organization>
+    <name>Dynamic Solutions sp. z o.o. sp. k.</name>
+    <url>https://ds.pl</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>GNU Affero General Public License v3.0</name>
+      <url>https://github.com/DS-WebSight/websight-release-reactor/blob/master/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Michal Cukierman</name>
+      <email>michal.cukierman@ds.pl</email>
+      <organization>Dynamic Solutions</organization>
+      <organizationUrl>https://www.ds.pl/</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</connection>
+    <developerConnection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</developerConnection>
+    <url>https://github.com/DS-WebSight/websight-release-reactor</url>
+  </scm>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>slingstart-maven-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${basedir}</directory>
+              <includes>
+                <include>sling/**</include>
+              </includes>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>ianal-maven-plugin</artifactId>
+        <configuration>
+          <requiredFiles>
+            <file>LICENSE</file>
+          </requiredFiles>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>1.8</version>
+        <executions>
+          <execution>
+            <id>license-management</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>update-project-license</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <licenseName>agpl_v3</licenseName>
+          <licenseFile>${project.basedir}/LICENSE</licenseFile>
+          <generateBundle>true</generateBundle>
+          <bundleLicensePath>../../slingstart-tmp/standalone/META-INF/LICENSE</bundleLicensePath>
+          <excludedScopes>test</excludedScopes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <delete>
+                  <fileset dir="${project.build.directory}/slingstart-tmp/standalone/META-INF">
+                    <include name="NOTICE" />
+                    <include name="DEPENDENCIES" />
+                  </fileset>
+                </delete>
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <configuration>
+          <skipSource>true</skipSource>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

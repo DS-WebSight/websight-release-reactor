@@ -1,0 +1,68 @@
+[feature name=repoinit]
+
+[artifacts]
+  org.apache.sling/org.apache.sling.repoinit.parser/1.4.2
+  org.apache.sling/org.apache.sling.jcr.repoinit/1.1.20
+  org.apache.sling/org.apache.sling.provisioning.model/1.8.4
+
+[:repoinit]
+    # general
+    create path (sling:OrderedFolder) /content
+    set ACL for everyone
+        allow   jcr:read	on /content
+    end
+
+    # sling-mapping
+    create service user sling-mapping
+
+    set ACL for sling-mapping
+        allow   jcr:read    on /
+    end
+
+    # sling-readall
+    create service user sling-readall
+
+    set ACL for sling-readall
+        allow   jcr:read    on /
+    end
+
+    # sling-xss
+    create service user sling-xss
+
+    create path (sling:Folder) /apps/sling/xss
+
+    set ACL for sling-xss
+        allow   jcr:read    on /apps/sling/xss
+    end
+
+    # sling-i18n
+    create service user sling-i18n
+
+    set ACL for sling-i18n
+        allow   jcr:read    on /
+    end
+
+    # sling-jcr-install
+    create service user sling-jcr-install
+
+    # used for config OSGi writeback
+    create path (sling:Folder) /apps/sling/install
+
+    set ACL for sling-jcr-install
+        allow	jcr:read	on	/
+        # BP-387 sling-jcr-install could not create updated configuration resources
+        # allow	 rep:write	 on  /apps/sling/install
+        allow	rep:write	on /apps
+    end
+
+    # sling package install
+    create service user sling-package-install
+
+    set ACL for sling-package-install
+        allow  jcr:all     on  /
+        allow  jcr:namespaceManagement,jcr:nodeTypeDefinitionManagement on :repository
+    end
+
+[configurations]
+  org.apache.sling.jcr.repoinit.impl.RepositoryInitializer
+    references="model@repoinit:context:/resources/provisioning/model.txt"
