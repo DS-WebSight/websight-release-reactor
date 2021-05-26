@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>pl.ds.websight</groupId>
     <artifactId>websight-package-parent</artifactId>
-    <version>2</version>
-    <relativePath></relativePath>
+    <version>4</version>
+    <relativePath />
   </parent>
   <artifactId>websight-release-admin-sling</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>content-package</packaging>
   <name>WebSight Release Admin Sling</name>
   <description>Sling Package with WebSight.Admin toolset.</description>
@@ -36,160 +35,162 @@
     <connection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</connection>
     <developerConnection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</developerConnection>
     <url>https://github.com/DS-WebSight/websight-release-reactor</url>
+    <tag>1.0.4</tag>
   </scm>
   <dependencies>
+
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-atlaskit-esm</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-bean-validation</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-request-parameters-support</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-rest-framework</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-rest-esm-client</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-rest-atlaskit-client</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-fragments-registry</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-fragments-esm</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-autosuggestion-service</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-autosuggestion-esm</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-authentication-postprocessor</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-authentication-view</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-system-user-provider-service</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-system-user-provider-config</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-system-status</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-admin-commons</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-resource-browser-service</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-resource-browser-ext-jcr</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-resource-browser-content</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-resource-browser-view</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-package-manager-service</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.4</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-package-manager-view</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.4</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-package-manager-config</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.4</version>
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-user-manager-service</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-user-manager-view</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-groovy-console-service</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-groovy-console-view</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-swagger-browser-view</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-swagger-browser-service</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-footer</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>javax.validation</groupId>
@@ -245,27 +246,6 @@
               <filter>true</filter>
             </subPackage>
           </subPackages>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <version>1.8</version>
-        <executions>
-          <execution>
-            <id>license-management</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>update-project-license</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <licenseName>agpl_v3</licenseName>
-          <licenseFile>${project.basedir}/LICENSE</licenseFile>
-          <generateBundle>true</generateBundle>
-          <bundleLicensePath>../../slingstart-tmp/standalone/META-INF/LICENSE</bundleLicensePath>
-          <excludedScopes>test</excludedScopes>
         </configuration>
       </plugin>
     </plugins>

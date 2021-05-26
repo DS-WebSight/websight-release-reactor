@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>pl.ds.websight</groupId>
     <artifactId>websight-parent</artifactId>
-    <version>2</version>
-    <relativePath></relativePath>
+    <version>4</version>
+    <relativePath />
   </parent>
   <artifactId>websight-release-admin-standalone</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>slingstart</packaging>
   <name>WebSight Release Admin Standalone</name>
   <description>Standalone WebSight.Admin toolset.</description>
@@ -36,13 +35,20 @@
     <connection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</connection>
     <developerConnection>scm:git:ssh://github.com:DS-WebSight/websight-release-reactor.git</developerConnection>
     <url>https://github.com/DS-WebSight/websight-release-reactor</url>
+    <tag>1.0.4</tag>
   </scm>
+    <properties>
+        <websight.release.admin.sling.version>${project.version}</websight.release.admin.sling.version>
+    </properties>
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.sling</groupId>
         <artifactId>slingstart-maven-plugin</artifactId>
         <extensions>true</extensions>
+          <configuration>
+              <usePomVariables>true</usePomVariables>
+          </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
@@ -55,36 +61,6 @@
               </includes>
             </fileset>
           </filesets>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>ianal-maven-plugin</artifactId>
-        <configuration>
-          <requiredFiles>
-            <file>LICENSE</file>
-          </requiredFiles>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <version>1.8</version>
-        <executions>
-          <execution>
-            <id>license-management</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>update-project-license</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <licenseName>agpl_v3</licenseName>
-          <licenseFile>${project.basedir}/LICENSE</licenseFile>
-          <generateBundle>true</generateBundle>
-          <bundleLicensePath>../../slingstart-tmp/standalone/META-INF/LICENSE</bundleLicensePath>
-          <excludedScopes>test</excludedScopes>
         </configuration>
       </plugin>
       <plugin>

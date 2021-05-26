@@ -2,13 +2,13 @@
 
 [artifacts]
     # Websight Sling Release
-    pl.ds.websight/websight-release-admin-sling/1.0.3/zip
+    pl.ds.websight/websight-release-admin-sling/${websight.release.admin.sling.version}/zip
 
     # Libraries
-    pl.ds.websight/websight-authentication-config/1.0.2/zip
-    pl.ds.websight/websight-authentication-token/1.0.2
-    pl.ds.websight/websight-error-handlers/1.0.1
-    pl.ds.websight/websight-root-redirect/1.0.1
+    pl.ds.websight/websight-authentication-config/1.0.3/zip
+    pl.ds.websight/websight-authentication-token/1.0.3
+    pl.ds.websight/websight-error-handlers/1.0.2
+    pl.ds.websight/websight-root-redirect/1.0.2
 
 [artifacts startLevel=15]
     org.apache.jackrabbit.vault/org.apache.jackrabbit.vault/3.4.0
